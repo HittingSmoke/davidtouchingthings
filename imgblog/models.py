@@ -4,11 +4,6 @@ from django.utils import timezone
 
 class Post(models.Model):
     author = models.ForeignKey('auth.User')
-    #image = models.ImageField(upload_to='media')
-    #large_thumbnail = models.ImageField(
-    #    upload_to='media/thumbnails/large')
-    #small_thumbnail = models.ImageField(
-    #    upload_to='media/thumbnails/small')
     title = models.CharField(max_length=300)
     caption = models.TextField()
     created_date = models.DateTimeField(
